@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, skills, and background.
 
-**Live:** [basanta.dev on Vercel](https://your-vercel-url.vercel.app)
+**Live:** [portfolio](https://basanta-portfolio44.vercel.app/)
 
 ## Built With
 
