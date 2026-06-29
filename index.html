@@ -33,6 +33,7 @@
     overflow-x: hidden;
   }
 
+  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -53,6 +54,7 @@
   }
   .nav-links a:hover { color: var(--cyan); }
 
+  /* ── HERO ── */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
@@ -85,7 +87,7 @@
   .hero h1 .accent { color: var(--cyan); }
   .hero-sub {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--muted); max-width: 540px; margin-bottom: 2.5rem;
+    color: var(--muted); max-width: 580px; margin-bottom: 2.5rem;
     line-height: 1.7;
   }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -118,6 +120,7 @@
   }
   @keyframes scrollPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
 
+  /* ── SECTIONS ── */
   section { padding: 6rem 5%; }
   .section-label {
     font-family: 'JetBrains Mono', monospace;
@@ -135,6 +138,24 @@
     background: var(--border); margin-bottom: 3rem;
   }
 
+  /* ── OBJECTIVE ── */
+  #objective { background: var(--navy-2); }
+  .objective-card {
+    max-width: 780px;
+    padding: 2rem 2.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
+  }
+  .objective-card p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .objective-card p strong { color: var(--white); }
+
+  /* ── ABOUT ── */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,6 +177,7 @@
   .meta-value a { color: var(--cyan); text-decoration: none; }
   .meta-value a:hover { text-decoration: underline; }
 
+  /* ── SKILLS ── */
   #skills { background: var(--navy-2); }
   .skills-grid {
     display: grid;
@@ -185,6 +207,7 @@
     border-radius: 3px; color: var(--white);
   }
 
+  /* ── PROJECTS ── */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; }
   .project-card {
     padding: 2rem;
@@ -237,6 +260,7 @@
   }
   .project-link:hover { gap: 0.5rem; }
 
+  /* ── EDUCATION ── */
   #education { background: var(--navy-2); }
   .edu-card {
     padding: 2rem 2.5rem;
@@ -255,6 +279,10 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem; color: var(--muted); margin-bottom: 1.2rem;
   }
+  .edu-note {
+    font-size: 0.88rem; color: var(--muted);
+    margin-bottom: 1.2rem; font-style: italic;
+  }
   .edu-subjects { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .edu-subject {
     font-size: 0.8rem; padding: 0.3rem 0.7rem;
@@ -263,6 +291,7 @@
     border-radius: 20px; color: var(--muted);
   }
 
+  /* ── CONTACT ── */
   .contact-inner {
     max-width: 600px;
     text-align: center; margin: 0 auto;
@@ -285,6 +314,7 @@
   .contact-link:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
   .contact-link .link-icon { font-size: 1.1rem; }
 
+  /* ── FOOTER ── */
   footer {
     padding: 2rem 5%;
     border-top: 1px solid var(--border);
@@ -297,9 +327,11 @@
   }
   footer p span { color: var(--cyan); }
 
+  /* ── ANIMATIONS ── */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
+  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     nav { padding: 1rem 5%; }
@@ -320,6 +352,7 @@
 <nav>
   <div class="nav-logo">basanta.dev<span style="color:var(--muted)">_</span></div>
   <ul class="nav-links">
+    <li><a href="#objective">Objective</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -328,11 +361,11 @@
   </ul>
 </nav>
 
+<!-- ── HERO ── -->
 <section class="hero" id="home">
-  <div class="hero-eyebrow">// hello world — I'm <span>|</span></div>
   <h1>Basanta<br><span class="accent">Khadka</span></h1>
   <p class="hero-sub">
-    BIM student &amp; web developer based in Bhaktapur, Nepal — building full-stack applications with React, Python, and modern tooling.
+    BIM student &amp; full-stack developer based in Bhaktapur, Nepal — building real-world apps with React, TypeScript, Python, and Firebase. Seeking an IT internship to apply these skills in production.
   </p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -341,6 +374,19 @@
   <div class="hero-scroll">scroll</div>
 </section>
 
+<!-- ── OBJECTIVE ── -->
+<section id="objective">
+  <div class="section-label">00 — objective</div>
+  <h2 class="section-title">What I'm Looking For</h2>
+  <div class="divider"></div>
+  <div class="objective-card reveal">
+    <p>
+      BIM student with hands-on experience building <strong>full-stack web apps</strong> (React / Firebase), including authentication, real-time databases, and payment integration. Seeking an <strong>IT internship</strong> to apply these skills in a production environment and grow alongside a professional engineering team.
+    </p>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
 <section id="about">
   <div class="section-label">01 — about</div>
   <h2 class="section-title">Who I Am</h2>
@@ -391,61 +437,65 @@
         <div class="meta-icon">💼</div>
         <div>
           <div class="meta-label">LinkedIn</div>
-          <div class="meta-value"><a href="https://linkedin.com/in/basanta-khadka-s12972418" target="_blank" rel="noopener">linkedin.com/in/basanta-khadka</a></div>
+          <div class="meta-value"><a href="https://linkedin.com/in/basanta-khadka4" target="_blank" rel="noopener">linkedin.com/in/basanta-khadka4</a></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── SKILLS ── -->
 <section id="skills">
   <div class="section-label">02 — skills</div>
   <h2 class="section-title">Technical Skills</h2>
   <div class="divider"></div>
   <div class="skills-grid reveal">
     <div class="skill-card">
+      <div class="skill-card-title">Languages</div>
+      <div class="skill-tags">
+        <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+        <span class="tag">Python</span><span class="tag">HTML</span><span class="tag">CSS</span>
+      </div>
+    </div>
+    <div class="skill-card">
       <div class="skill-card-title">Frontend</div>
       <div class="skill-tags">
-        <span class="tag">HTML</span><span class="tag">CSS</span>
         <span class="tag">React.js</span><span class="tag">TypeScript</span>
+        <span class="tag">HTML</span><span class="tag">CSS</span>
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-card-title">Backend</div>
+      <div class="skill-card-title">Backend &amp; DBs</div>
       <div class="skill-tags">
-        <span class="tag">Python</span><span class="tag">Firebase</span>
-        <span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Firebase</span><span class="tag">Supabase</span>
+        <span class="tag">PostgreSQL</span><span class="tag">Firestore</span>
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-card-title">Tools &amp; VCS</div>
+      <div class="skill-card-title">Tools &amp; Deployment</div>
       <div class="skill-tags">
         <span class="tag">Git</span><span class="tag">GitHub</span>
         <span class="tag">VS Code</span><span class="tag">Vercel</span>
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-card-title">Databases</div>
-      <div class="skill-tags">
-        <span class="tag">Firebase Firestore</span>
-        <span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
-      </div>
-    </div>
-    <div class="skill-card">
       <div class="skill-card-title">Soft Skills</div>
       <div class="skill-tags">
         <span class="tag">Adaptability</span><span class="tag">Team Collaboration</span>
-        <span class="tag">Attention to Detail</span><span class="tag">Eager to Learn</span>
+        <span class="tag">Attention to Detail</span><span class="tag">Willingness to Learn</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── PROJECTS ── -->
 <section id="projects">
   <div class="section-label">03 — projects</div>
   <h2 class="section-title">What I've Built</h2>
   <div class="divider"></div>
   <div class="projects-grid reveal">
+
+    <!-- Insight Reader -->
     <div class="project-card">
       <div class="project-stack">
         <span class="stack-badge">React</span>
@@ -453,15 +503,36 @@
         <span class="stack-badge">Vercel</span>
       </div>
       <div class="project-title">Insight Reader</div>
-      <p class="project-desc">A full-stack digital library platform with Google OAuth authentication, real-time reading progress tracking, and a personal dashboard for managing book notes.</p>
+      <p class="project-desc">A full-stack digital library platform with Google OAuth authentication, real-time reading progress tracking, and a personal Insight Dashboard for managing book notes.</p>
       <div class="project-feature">240+ searchable books with ratings &amp; recommendations</div>
       <div class="project-feature">CRUD note system (notes per book)</div>
       <div class="project-feature">Bookmarking, dark/light mode</div>
       <div class="project-links">
-        <a class="project-link" href="https://insight-reader-khaki.vercel.app" target="_blank" rel="noopener">Live Demo →</a>
+        <a class="project-link" href="https://insight-reader1.vercel.app" target="_blank" rel="noopener">Live Demo →</a>
         <a class="project-link" href="https://github.com/Basanta444/Insight-Reader" target="_blank" rel="noopener">GitHub →</a>
       </div>
     </div>
+
+    <!-- TechHaven -->
+    <div class="project-card">
+      <div class="project-stack">
+        <span class="stack-badge">React</span>
+        <span class="stack-badge">TypeScript</span>
+        <span class="stack-badge">Firebase</span>
+        <span class="stack-badge">Vercel</span>
+      </div>
+      <div class="project-title">TechHaven</div>
+      <p class="project-desc">A full-featured e-commerce platform for electronics with product catalog, cart &amp; wishlist (localStorage persistence), and checkout supporting eSewa, Khalti, and card payment.</p>
+      <div class="project-feature">Role-based access control (RBAC) with admin dashboard</div>
+      <div class="project-feature">Real-time product &amp; order management via Firestore CRUD</div>
+      <div class="project-feature">End-to-end TypeScript for type safety</div>
+      <div class="project-links">
+        <a class="project-link" href="https://techhaven-electronics.vercel.app" target="_blank" rel="noopener">Live Demo →</a>
+        <a class="project-link" href="https://github.com/Basanta444/techhaven-electronics" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- PyBot -->
     <div class="project-card">
       <div class="project-stack">
         <span class="stack-badge">Python</span>
@@ -477,23 +548,11 @@
         <a class="project-link" href="https://github.com/Basanta444/Intermediate-chatbot" target="_blank" rel="noopener">GitHub →</a>
       </div>
     </div>
-    <div class="project-card" style="border: 1px dashed rgba(0,212,255,0.25); opacity: 0.75;">
-      <div class="project-stack">
-        <span class="stack-badge">TypeScript</span>
-        <span class="stack-badge">React</span>
-        <span class="stack-badge">Coming Soon</span>
-      </div>
-      <div class="project-title">Electronic Store</div>
-      <p class="project-desc">A full-featured e-commerce platform for electronics built with TypeScript and React. Currently in active development — stay tuned.</p>
-      <div class="project-feature">Full product catalog &amp; cart system</div>
-      <div class="project-feature">TypeScript for end-to-end type safety</div>
-      <div class="project-links" style="margin-top: auto;">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--muted);">// in progress</span>
-      </div>
-    </div>
+
   </div>
 </section>
 
+<!-- ── EDUCATION ── -->
 <section id="education">
   <div class="section-label">04 — education</div>
   <h2 class="section-title">Background</h2>
@@ -503,11 +562,11 @@
       <div class="edu-degree">Bachelor of Information Management (BIM)</div>
       <div class="edu-school">Tribhuvan University, Nepal</div>
       <div class="edu-period">2023 — Present &nbsp;·&nbsp; 8th Semester</div>
+      <div class="edu-note">Actively building web projects as part of coursework and self-study</div>
       <div class="edu-subjects">
         <span class="edu-subject">Database Management</span>
-        <span class="edu-subject">Web Technologies</span>
         <span class="edu-subject">Data Structures &amp; Algorithms</span>
-        <span class="edu-subject">Operating Systems</span>
+        <span class="edu-subject">Python</span>
         <span class="edu-subject">Artificial Intelligence</span>
         <span class="edu-subject">Information Security</span>
         <span class="edu-subject">Web Technology I &amp; II</span>
@@ -516,6 +575,7 @@
   </div>
 </section>
 
+<!-- ── CONTACT ── -->
 <section id="contact">
   <div class="contact-inner reveal">
     <div class="section-label">05 — contact</div>
@@ -526,7 +586,7 @@
       <a class="contact-link" href="mailto:basantakhadka8484@gmail.com">
         <span class="link-icon">📧</span> Email Me
       </a>
-      <a class="contact-link" href="https://linkedin.com/in/basanta-khadka-s12972418" target="_blank" rel="noopener">
+      <a class="contact-link" href="https://linkedin.com/in/basanta-khadka4" target="_blank" rel="noopener">
         <span class="link-icon">💼</span> LinkedIn
       </a>
       <a class="contact-link" href="https://github.com/Basanta444" target="_blank" rel="noopener">
@@ -542,6 +602,7 @@
 </footer>
 
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -553,8 +614,9 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // Typewriter
   const eyebrow = document.querySelector('.hero-eyebrow');
-  const text = '// hello world — I\'m ';
+  const text = "// hello world — I'm ";
   const cursor = eyebrow.querySelector('span');
   eyebrow.childNodes[0].textContent = '';
   let i = 0;
