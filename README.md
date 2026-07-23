@@ -20,4 +20,4 @@ HTML · CSS · Vanilla JavaScript
 
 ---
 
-Designed and built by Basanta Khadka — Bhaktapur, Nepal
+Designed and built by Basanta Khadka
