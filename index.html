@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="/Nn.svg" />
 <title>Basanta Khadka — Developer Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,13 +69,6 @@
     background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 65%);
     pointer-events: none;
   }
-  .hero-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem; color: var(--cyan); letter-spacing: 0.1em;
-    margin-bottom: 1.2rem;
-  }
-  .hero-eyebrow span { animation: blink 1s step-end infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
   .hero h1 {
     font-family: 'Space Grotesk', sans-serif;
@@ -249,7 +243,7 @@
     display: flex; align-items: center; gap: 0.5rem;
   }
   .project-feature::before { content: '→'; color: var(--cyan); font-size: 0.75rem; }
-  .project-links { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+  .project-links { display: flex; gap: 0.8rem; margin-top: 1.5rem; flex-wrap: wrap; }
   .project-link {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.8rem; font-weight: 600;
@@ -365,7 +359,7 @@
 <section class="hero" id="home">
   <h1>Basanta<br><span class="accent">Khadka</span></h1>
   <p class="hero-sub">
-    BIM student &amp; full-stack developer based in Bhaktapur, Nepal — building real-world apps with React, TypeScript, Python, and Firebase. Seeking an IT internship to apply these skills in production.
+    BIM student &amp; full-stack developer based in Bhaktapur, Nepal, building real-world apps with React, TypeScript, Python, and Firebase. Seeking an IT internship to apply these skills in production.
   </p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -381,7 +375,7 @@
   <div class="divider"></div>
   <div class="objective-card reveal">
     <p>
-      BIM student with hands-on experience building <strong>full-stack web apps</strong> (React / Firebase), including authentication, real-time databases, and payment integration. Seeking an <strong>IT internship</strong> to apply these skills in a production environment and grow alongside a professional engineering team.
+      BIM student with hands-on experience building <strong>full-stack web apps</strong> (React / Firebase/Supabase), including authentication, real-time databases, and payment integration. Seeking an <strong>IT internship</strong> to apply these skills in a production environment and grow alongside a professional engineering team.
     </p>
   </div>
 </section>
@@ -393,8 +387,8 @@
   <div class="divider"></div>
   <div class="about-grid reveal">
     <div class="about-text">
-      <p>I'm a <strong>Bachelor of Information Management</strong> student at Tribhuvan University, currently in my 8th semester. My focus is on building real, working things — not just studying them.</p>
-      <p>I gravitate toward the full stack: designing interfaces that feel intuitive on the front end, and writing clean backend logic in Python and Firebase. I enjoy learning by shipping — every project on this page exists because I wanted to solve a real problem.</p>
+      <p>I'm a <strong>Bachelor of Information Management</strong> student at Tribhuvan University, currently in my 8th semester. My focus is on building real, working things, not just studying them.</p>
+      <p>I gravitate toward the full stack: designing interfaces that feel intuitive on the front end, and writing clean backend logic in Python and Firebase. I enjoy learning by shipping, every project on this page exists because I wanted to solve a real problem.</p>
       <p>I'm actively seeking an <strong>IT internship</strong> where I can contribute to real-world projects and grow alongside a professional team.</p>
     </div>
     <div class="about-meta">
@@ -437,7 +431,14 @@
         <div class="meta-icon">💼</div>
         <div>
           <div class="meta-label">LinkedIn</div>
-          <div class="meta-value"><a href="https://linkedin.com/in/basanta-khadka4" target="_blank" rel="noopener">linkedin.com/in/basanta-khadka4</a></div>
+          <div class="meta-value"><a href="https://www.linkedin.com/in/basanta-khadka4/" target="_blank" rel="noopener">linkedin.com/in/basanta-khadka4</a></div>
+        </div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-icon">🌐</div>
+        <div>
+          <div class="meta-label">Portfolio</div>
+          <div class="meta-value"><a href="https://basanta-portfolio44.vercel.app/" target="_blank" rel="noopener">basanta-portfolio44.vercel.app</a></div>
         </div>
       </div>
     </div>
@@ -460,15 +461,14 @@
     <div class="skill-card">
       <div class="skill-card-title">Frontend</div>
       <div class="skill-tags">
-        <span class="tag">React.js</span><span class="tag">TypeScript</span>
-        <span class="tag">HTML</span><span class="tag">CSS</span>
+        <span class="tag">React.js</span><span class="tag">React Native</span>
+        <span class="tag">TypeScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
       </div>
     </div>
     <div class="skill-card">
       <div class="skill-card-title">Backend &amp; DBs</div>
       <div class="skill-tags">
         <span class="tag">Firebase</span><span class="tag">Supabase</span>
-        <span class="tag">PostgreSQL</span><span class="tag">Firestore</span>
       </div>
     </div>
     <div class="skill-card">
@@ -481,8 +481,8 @@
     <div class="skill-card">
       <div class="skill-card-title">Soft Skills</div>
       <div class="skill-tags">
-        <span class="tag">Adaptability</span><span class="tag">Team Collaboration</span>
-        <span class="tag">Attention to Detail</span><span class="tag">Willingness to Learn</span>
+        <span class="tag">Adaptability</span><span class="tag">Initiative</span>
+        <span class="tag">Problem-solving</span>
       </div>
     </div>
   </div>
@@ -529,6 +529,25 @@
       <div class="project-links">
         <a class="project-link" href="https://techhaven-electronics.vercel.app" target="_blank" rel="noopener">Live Demo →</a>
         <a class="project-link" href="https://github.com/Basanta444/techhaven-electronics" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Food Delivery -->
+    <div class="project-card">
+      <div class="project-stack">
+        <span class="stack-badge">React Native</span>
+        <span class="stack-badge">Expo</span>
+        <span class="stack-badge">TypeScript</span>
+        <span class="stack-badge">Supabase</span>
+      </div>
+      <div class="project-title">Food Delivery</div>
+      <p class="project-desc">A cross-platform food ordering app with real-time restaurant browsing, cart, and checkout, including live order tracking and a role-based admin panel for managing restaurants, orders, and users.</p>
+      <div class="project-feature">Real-time restaurant browsing &amp; live order tracking</div>
+      <div class="project-feature">Role-based admin panel for restaurants, orders &amp; users</div>
+      <div class="project-feature">Checkout with eSewa &amp; Khalti payment methods</div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/Basanta444/food-delivery" target="_blank" rel="noopener">GitHub →</a>
+        <a class="project-link" href="https://github.com/Basanta444/food-delivery/releases/download/v1.0.0/Food-Delivery.apk" target="_blank" rel="noopener">Download APK →</a>
       </div>
     </div>
 
@@ -586,7 +605,7 @@
       <a class="contact-link" href="mailto:basantakhadka8484@gmail.com">
         <span class="link-icon">📧</span> Email Me
       </a>
-      <a class="contact-link" href="https://linkedin.com/in/basanta-khadka4" target="_blank" rel="noopener">
+      <a class="contact-link" href="https://www.linkedin.com/in/basanta-khadka4/" target="_blank" rel="noopener">
         <span class="link-icon">💼</span> LinkedIn
       </a>
       <a class="contact-link" href="https://github.com/Basanta444" target="_blank" rel="noopener">
@@ -613,20 +632,6 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Typewriter
-  const eyebrow = document.querySelector('.hero-eyebrow');
-  const text = "// hello world — I'm ";
-  const cursor = eyebrow.querySelector('span');
-  eyebrow.childNodes[0].textContent = '';
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      eyebrow.childNodes[0].textContent += text[i++];
-      setTimeout(type, 40);
-    }
-  }
-  setTimeout(type, 400);
 </script>
 </body>
 </html>
